@@ -10,7 +10,7 @@ if (navigator.geolocation) {
       languages: navigator.languages,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
-    fetch('TU_ENDPOINT', {
+    fetch('https://hy-try.vercel.app/location', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
