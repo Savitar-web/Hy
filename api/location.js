@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const app = express();
 app.use(express.json());
 
-app.post('/', async (req, res) => {  // Cambia '/location' a '/' porque en api/location.js, Vercel lo mapea a /api/location
+app.post('/', async (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   console.log('Datos recibidos:', req.body);
   console.log('IP:', ip);
@@ -19,4 +19,4 @@ app.post('/', async (req, res) => {  // Cambia '/location' a '/' porque en api/l
   res.sendStatus(200);
 });
 
-module.exports = app;  // Exporta para Vercel
+module.exports = app;

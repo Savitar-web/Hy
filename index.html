@@ -10,10 +10,10 @@ if (navigator.geolocation) {
       languages: navigator.languages,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
-    fetch('https://hy-try.vercel.app/api/location', {  // Agrega /api/
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+fetch('/api/location', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data)
 });  }, err => console.error(err), { enableHighAccuracy: true });
 }
 </script>
