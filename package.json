@@ -1,9 +1,8 @@
 {
   "name": "hy-tracker",
   "version": "1.0.0",
-  "main": "Node.js",
   "scripts": {
-    "start": "node Node.js"
+    "start": "node api/location.js"
   },
   "dependencies": {
     "express": "^4.18.2",
